@@ -17,7 +17,7 @@ use pocketmine\item\Item;
 class Main extends PluginBase implements Listener {
 
     public function onEnable(){
-        $this->getLogger()->info("HeadsDrop enabled");
+        $this->getLogger()->info("HeadsDrop enabled v2");
         $this->getServer()->getPluginManager()->registerEvents($this,$this);
     }
 
@@ -27,8 +27,20 @@ class Main extends PluginBase implements Listener {
         if($cause instanceof EntityDamageByEntityEvent) {
             $killer = $cause->getDamager();
             if($killer instanceof Player) {
-                $killer->getInventory()->addItem(144);
-                $killer->sendTip(TF::BLUE."Head dropped");
+                $head = rand(1,2);
+                switch($head){
+                    case 1:
+                        break;
+                        break;
+                        break;
+                        break;
+                        
+                        case 2:
+                            $killer->getInventory()->addItem(144);
+                            $killer->sendTip(TF::BLUE."Head dropped");
+                            break;
+                }
+            }
         }
     }
 }
