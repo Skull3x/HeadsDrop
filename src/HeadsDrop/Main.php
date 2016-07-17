@@ -14,6 +14,9 @@ use pocketmine\event\player\PlayerItemHeldEvent;
 use pocketmine\utils\TextFormat as TF;
 use pocketmine\item\Item;
 
+use onebone\economyapi\EconomyAPI;
+use onebone\economyapi\event\EconomyAPIEvent;
+
 class Main extends PluginBase implements Listener {
 
     public function onEnable(){
