@@ -37,7 +37,7 @@ class Main extends PluginBase implements Listener {
                         
                         case 2:
                             $killer->getInventory()->addItem(144);
-                            $killer->sendTip(TF::BLUE."Head dropped");
+                            $killer->sendTip(TF::BLUE."You got " . $player->getName() ."'s head!");
                             break;
                 }
             }
